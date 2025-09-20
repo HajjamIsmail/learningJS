@@ -7,6 +7,7 @@
 3. [Objects and Memory Reference](#-objects-and-memory-reference)
 4. [Arrays](#-arrays)
 5. [Array Manipulation Methods](#-array-manipulation-methods)
+6. [Complete Guide to Loops in JavaScript](#-complete-guide-to-loops-in-javascript)
 
 ---
 
@@ -470,5 +471,212 @@ const allPositive = numbers.every(n => n > 0);
 | Iterate/Transform     | `forEach`, `map`, `filter`, `reduce`      |
 | Verify                | `some`, `every`                           |
 | Miscellaneous         | `join`, `sort`, `reverse`, `at`           |
+
+---
+
+## 🔧 Complete Guide to Loops in JavaScript
+
+### 1️⃣ Classic `for` loop
+
+#### Syntax
+
+```javascript
+for (initialization; condition; increment) {
+    // code to repeat
+}
+```
+
+#### Example
+
+```javascript
+for (let i = 0; i < 5; i++) {
+    console.log(i); // 0, 1, 2, 3, 4
+}
+```
+
+#### Key Points
+
+* `i` is initialized at the start.
+* The condition is checked **before each iteration**.
+* The increment (or decrement) modifies the control variable.
+* **Pitfall**: forgetting `i++` creates an infinite loop.
+
+---
+
+### 2️⃣ `while` loop
+
+#### Syntax
+
+```javascript
+while (condition) {
+    // code to repeat
+}
+```
+
+#### Example
+
+```javascript
+let i = 0;
+while (i < 5) {
+    console.log(i); // 0, 1, 2, 3, 4
+    i++;
+}
+```
+
+#### Key Points
+
+* Executes the block **as long as the condition is true**.
+* **Pitfall**: forgetting to update the control variable = infinite loop.
+
+---
+
+### 3️⃣ `do...while` loop
+
+#### Syntax
+
+```javascript
+do {
+    // code to repeat
+} while (condition);
+```
+
+#### Example
+
+```javascript
+let i = 0;
+do {
+    console.log(i); // 0, 1, 2, 3, 4
+    i++;
+} while (i < 5);
+```
+
+#### Key Feature
+
+* The block is executed **at least once**, even if the condition is false.
+
+---
+
+### 4️⃣ `for...of` loop
+
+#### Syntax
+
+```javascript
+for (const element of iterable) {
+    // code using element
+}
+```
+
+#### Example
+
+```javascript
+const fruits = ["apple", "banana", "orange"];
+for (const fruit of fruits) {
+    console.log(fruit);
+}
+```
+
+#### Key Points
+
+* Works for **arrays, strings, Map, Set**.
+* No direct access to the index (use `entries()` if needed).
+* **Pitfall**: does not work on non-iterable objects.
+
+---
+
+### 5️⃣ `for...in` loop
+
+#### Syntax
+
+```javascript
+for (const key in object) {
+    // code using key
+}
+```
+
+#### Example
+
+```javascript
+const person = { name: "Alice", age: 30 };
+for (const key in person) {
+    console.log(key, person[key]);
+}
+```
+
+#### Key Points
+
+* Iterates over the **keys of an object**.
+* For arrays, be careful: includes all properties, including inherited ones.
+* **Pitfall**: don’t use for regular arrays → prefer `for...of` or `forEach`.
+
+---
+
+### 6️⃣ Functional loops (array methods)
+
+| Method    | Use                                   | Example                                | Returns             |
+| --------- | ------------------------------------- | -------------------------------------- | ------------------- |
+| `forEach` | Iterate over each element             | `[1,2,3].forEach(n => console.log(n))` | undefined           |
+| `map`     | Transform each element                | `[1,2,3].map(n => n*2)`                | New array `[2,4,6]` |
+| `filter`  | Filter certain elements               | `[1,2,3,4].filter(n=>n%2===0)`         | New array `[2,4]`   |
+| `reduce`  | Reduce array to a single value        | `[1,2,3].reduce((acc,n)=>acc+n,0)`     | 6                   |
+| `some`    | Checks if at least one element passes | `[1,2,3].some(n=>n>2)`                 | true                |
+| `every`   | Checks if all elements pass           | `[1,2,3].every(n>0)`                   | true                |
+
+#### Key Points
+
+* `forEach` **cannot be interrupted** (`break` not allowed).
+* `map`, `filter`, `reduce` always return **new values**.
+* Very useful for **functional and readable code**.
+
+---
+
+### 7️⃣ Loop control: `break` and `continue`
+
+#### `break`
+
+* Exits the loop entirely.
+
+```javascript
+for (let i = 0; i < 5; i++) {
+    if (i === 3) break;
+    console.log(i); // 0, 1, 2
+}
+```
+
+#### `continue`
+
+* Skips to the next iteration.
+
+```javascript
+for (let i = 0; i < 5; i++) {
+    if (i === 2) continue;
+    console.log(i); // 0,1,3,4
+}
+```
+
+---
+
+### 8️⃣ Infinite loop (to avoid)
+
+```javascript
+while(true) {
+    console.log("Warning!");
+    break; // always provide an exit, otherwise infinite loop
+}
+```
+
+---
+
+### 📌 Visual Summary
+
+| Loop             | Main Use                       | Key Feature / Pitfall                               |
+| ---------------- | ------------------------------ | --------------------------------------------------- |
+| `for`            | Counting with an index         | Watch increment, `var` is function-scoped           |
+| `while`          | While condition is true        | Risk of infinite loop if control variable forgotten |
+| `do...while`     | Execute at least once          | Runs even if initial condition is false             |
+| `for...of`       | Iterate array or iterable      | No direct index access                              |
+| `for...in`       | Iterate object keys            | For arrays, includes inherited keys                 |
+| `forEach`        | Functional array iteration     | Cannot `break` or `return`                          |
+| `map` / `filter` | Transform or filter array      | Always returns a new array                          |
+| `reduce`         | Reduce array to a single value | Very powerful but syntax is slightly complex        |
 
 ---
