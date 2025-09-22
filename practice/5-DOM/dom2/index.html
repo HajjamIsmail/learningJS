@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="page">
+  <h1>DOM Level 2 Examples</h1>
+
+  <h2>Fruit List</h2>
+  <ul id="fruit-list">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Cherry</li>
+  </ul>
+
+  <h2>Classic Methods</h2>
+  <button onclick="exampleCreateAppend()">1. createElement + appendChild</button>
+  <button onclick="exampleInsertBefore()">2. insertBefore</button>
+  <button onclick="exampleRemoveChild()">3. removeChild</button>
+  <button onclick="exampleReplaceChild()">4. replaceChild</button>
+  <button onclick="exampleCloneNode()">5. cloneNode</button>
+
+  <h2>Modern Methods</h2>
+  <button onclick="exampleAppend()">6. append</button>
+  <button onclick="examplePrepend()">7. prepend</button>
+  <button onclick="exampleInsertAdjacentHTML()">8. insertAdjacentHTML</button>
+  <button onclick="exampleInsertAdjacentText()">9. insertAdjacentText</button>
+
+  <button onclick="resetPage()">🔄 Reset</button>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

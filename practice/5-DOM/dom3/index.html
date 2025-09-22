@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="page">
+  <h1 id="main-title">DOM Level 3 Examples</h1>
+
+  <h2>Content Examples</h2>
+  <div id="content-box">Original <strong>HTML</strong> content</div>
+
+  <h2>Attributes Examples</h2>
+  <img id="my-image" src="img/download.png" alt="Placeholder" data-info="example">
+
+  <h2>Classes Examples</h2>
+  <div id="class-box" class="box red">Class Example</div>
+
+  <h2>Styles Examples</h2>
+  <div id="style-box" style="width:100px; height:100px; background-color:lightblue;">Style Box</div>
+
+  <h2>Actions</h2>
+  <!-- Content buttons -->
+  <button onclick="changeInnerHTML()">1. innerHTML</button>
+  <button onclick="changeTextContent()">2. textContent</button>
+  <button onclick="changeInnerText()">3. innerText</button>
+
+  <!-- Attributes buttons -->
+  <button onclick="setAttributeExample()">4. setAttribute</button>
+  <button onclick="getAttributeExample()">5. getAttribute</button>
+  <button onclick="removeAttributeExample()">6. removeAttribute</button>
+  <button onclick="hasAttributeExample()">7. hasAttribute</button>
+  <button onclick="datasetExample()">8. dataset</button>
+
+  <!-- Classes buttons -->
+  <button onclick="addClassExample()">9. classList.add</button>
+  <button onclick="removeClassExample()">10. classList.remove</button>
+  <button onclick="toggleClassExample()">11. classList.toggle</button>
+  <button onclick="replaceClassExample()">12. classList.replace</button>
+  <button onclick="containsClassExample()">13. classList.contains</button>
+
+  <!-- Styles buttons -->
+  <button onclick="changeInlineStyle()">14. element.style</button>
+  <button onclick="getComputedStyleExample()">15. getComputedStyle</button>
+
+  <button onclick="resetPage()">🔄 Reset</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

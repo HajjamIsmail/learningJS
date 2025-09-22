@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="page">
+  <h1>DOM Level 4: Tree Navigation</h1>
+
+  <h2>Example Structure</h2>
+  <div id="tree-box">
+    <ul id="fruit-list">
+      <li id="apple">Apple</li>
+      <li id="banana">Banana</li>
+      <li id="cherry">Cherry</li>
+    </ul>
+  </div>
+
+  <h2>Navigation Buttons</h2>
+  <!-- Parents -->
+  <button onclick="showParentNode()">1. parentNode</button>
+  <button onclick="showParentElement()">2. parentElement</button>
+
+  <!-- Children -->
+  <button onclick="showChildren()">3. children</button>
+  <button onclick="showChildNodes()">4. childNodes</button>
+
+  <!-- First/Last -->
+  <button onclick="showFirstChild()">5. firstChild</button>
+  <button onclick="showLastChild()">6. lastChild</button>
+  <button onclick="showFirstElementChild()">7. firstElementChild</button>
+  <button onclick="showLastElementChild()">8. lastElementChild</button>
+
+  <!-- Siblings -->
+  <button onclick="showNextSibling()">9. nextSibling</button>
+  <button onclick="showPreviousSibling()">10. previousSibling</button>
+  <button onclick="showNextElementSibling()">11. nextElementSibling</button>
+  <button onclick="showPreviousElementSibling()">12. previousElementSibling</button>
+
+  <button onclick="resetPage()">🔄 Reset</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

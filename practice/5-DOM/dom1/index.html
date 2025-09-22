@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body id="page">
+    <h1 id="title">Hello</h1>
+
+    <h2>getElementsByClassName</h2>
+    <p class="item">AAAA</p>
+    <p class="item">BBBB</p>
+    <p class="item">CCCC</p>
+
+    <h2>getElementsByTagName</h2>
+    <div>Bloc 1</div>
+    <div>Bloc 2</div>
+    <div>Bloc 3</div>
+
+    <h2>querySelector</h2>
+    <p class="msg">TXT 1</p>
+    <p class="msg">TXT 2</p>
+
+    <h2>querySelectorAll</h2>
+    <ul>
+        <li>AAAA</li>
+        <li>BBBB</li>
+        <li>CCCC</li>
+        <li>DDDD</li>
+    </ul>
+
+    <h2>Testing function</h2>
+    <button onclick="testGetById()">1. getElementById</button>
+    <button onclick="testGetByClass()">2. getElementsByClassName</button>
+    <button onclick="testGetByTag()">3. getElementsByTagName</button>
+    <button onclick="testQuerySelector()">4. querySelector</button>
+    <button onclick="testQuerySelectorAll()">5. querySelectorAll</button>
+    <button onclick="resetPage()">6. Reset</button>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

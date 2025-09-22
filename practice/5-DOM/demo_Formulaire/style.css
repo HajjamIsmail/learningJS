@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"], input[type="date"] {
+  padding: 5px;
+  margin-left: 10px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+#errors {
+  color: red;
+  list-style-type: disc;
+}

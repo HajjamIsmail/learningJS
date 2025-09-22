@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Events Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="page">
+  <h1>DOM Level 7: Handling Events</h1>
+
+  <h2>Attach & Remove</h2>
+  <button id="btn-attach">Click Me (attach event)</button>
+  <button id="btn-remove">Remove Event</button>
+
+  <h2>Useful Methods</h2>
+  <form id="demo-form">
+    <input type="text" id="text-input" placeholder="Type something...">
+    <button type="submit">Submit</button>
+  </form>
+
+  <h2>Event Bubbling & Propagation</h2>
+  <div id="outer" class="box">
+    Outer
+    <div id="inner" class="box">Inner (click me)</div>
+  </div>
+
+  <h2>Dispatch Event</h2>
+  <button id="btn-dispatch">Dispatch Custom Event</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
